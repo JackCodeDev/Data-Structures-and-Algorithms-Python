@@ -1,0 +1,6 @@
+nemo = ["b","nemo","a"]
+def findNemo(array):
+  for i in range(len(nemo)):
+    if (array[i] =="nemo"):
+      return print("Found Nemo!")
+findNemo(nemo)
