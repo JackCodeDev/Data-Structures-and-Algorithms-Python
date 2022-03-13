@@ -1,0 +1,25 @@
+# Navie
+array1 = [1,2,3,9] # False
+array2 = [1,2,4,4] #True
+
+sum1 = 8
+def hasPairWithSum(arr,sum):
+  for i in range(0,(len(arr)-1)):
+    for j in range(i+1,len(arr)):
+      if arr[i]+arr[j]==sum:
+        return True
+  else:
+    return False
+a = hasPairWithSum(array2, sum1)
+print(a)
+
+#Better
+def hasPairWithSum(arr,sum):
+  mySet = set()
+  for i in range(len(arr)):
+    if arr[i] in mySet:
+      return True
+    mySet.add(sum - arr[i])
+  return False
+a = hasPairWithSum(array2, sum1)
+print(a)
