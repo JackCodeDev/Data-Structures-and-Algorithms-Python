@@ -1,0 +1,24 @@
+a = "Hi my name is Jack"
+# print(list(a))
+# b = list(a)
+
+# d = []
+# while True:
+#   if len(b)==0:
+#     break
+#   else:
+#     d.append(b.pop())
+# newList = ""
+# print (newList.join(d))
+def reverse(stack):
+
+  b = list (stack)
+  d = []
+  while True:
+    if len(b)==0:
+      break
+    else:
+      d.append(b.pop())
+  newList = ""
+  print (newList.join(d))
+newList = reverse(a)
