@@ -1,0 +1,35 @@
+import sys
+class MyArray:
+    def __init__(self):
+      self.stack = []
+    def push(self, item):
+      self.stack.append(item)
+    def pop(self):
+      if self.stack:
+        return self.stack.pop()
+      else:
+        return None
+    def __len__(self):
+      return len(self)
+  
+    def peek(self):
+      return self.stack[-1]
+stack = MyArray()
+
+stack.push(str(10))
+stack.push(str(20))
+stack.push(str(30))
+stack.push(str(70))
+stack.push(str(30))
+print(str(stack.pop())+" popped from stack")
+print("{} popped from stack".format((int(stack.pop())+120)))
+print(stack.__dict__)
+print(stack.__len__)
+#print(peek(stack))
+
+
+print(stack.peek())
+print(str(stack.pop())+" popped from stack")
+print(str(stack.pop())+" popped from stack")
+print(str(stack.pop())+" popped from stack")
+print(str(stack.pop())+" popped from stack")
