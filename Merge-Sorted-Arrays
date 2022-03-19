@@ -1,0 +1,33 @@
+def mergeSortedArrays(array1, array2):
+  if(len(array1) == 0): 
+    return array2
+  if(len(array2) == 0): 
+    return array1
+  mergedArray = []
+  i = 0
+  j = 0
+
+  
+  while ((i<len(array1)) and (j<len(array2))):
+    print(array1[i], array2[j])       
+    if((array1[i] < array2[j])):
+      mergedArray.append(array1[i])
+      i=i+1
+    else:      
+      mergedArray.append(array2[j])
+      j=j+1
+  while (i<len(array1)):
+    mergedArray.append(array1[i])
+    i=i+1
+  while (i<len(array1)):
+    mergedArray.append(array2[j])
+    j=j+1        
+  
+  return mergedArray
+  
+a = [1,3,4,31]
+b = [3,4,6,30]
+c = mergeSortedArrays(a,b) 
+print(a)
+print(b)
+print(c)
