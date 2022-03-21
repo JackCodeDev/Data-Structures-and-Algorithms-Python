@@ -1,0 +1,24 @@
+class HashTable:
+ 
+    # default constructor
+  def __init__(self):
+    self.data = 50
+    self.arr=[None for i in range (self.data)]
+  def hash(self,key):
+    hash = 0
+    for i in range (0,len(key)):
+      hash = (hash + ord(key[i])*i)  % self.data
+    return hash
+  def set_hash(self,key, value):
+    address = self.hash(key)
+    self.arr[address] = value
+  def get_hash(self,key):
+    address = self.hash(key)
+    return self.arr[address]
+
+myHashTable = HashTable()
+myHashTable.set_hash('grapes', 10000)
+print(myHashTable.get_hash('grapes'))
+myHashTable.set_hash('apples', 9)
+print(myHashTable.get_hash('apples'))  
+print(myHashTable.hash('grapes'))
