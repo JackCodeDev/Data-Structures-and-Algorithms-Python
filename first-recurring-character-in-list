@@ -1,0 +1,28 @@
+# //Google Question
+# //Given an array = [2,5,1,2,3,5,1,2,4]:
+# //It should return 2
+
+# //Given an array = [2,1,1,2,3,5,1,2,4]:
+# //It should return 1
+
+# //Given an array = [2,3,4,5]:
+# //It should return undefined
+def findArray1 (self):
+  for i in range (len(self)-1):
+    for j in range (1,(len(self)-1)):
+      if self[i] == self[j]:
+        return print(self[i])
+
+array = [2,4]
+findArray1(array)
+
+def findArray2 (self):
+  self_dictionary = {}
+  for key in self:
+    if key in self_dictionary:
+      return print(key)
+    else:
+      self_dictionary ={key}
+  else:
+    print('not found')
+findArray2(array)
