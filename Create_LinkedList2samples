@@ -1,0 +1,53 @@
+class myLinkedlistNode():
+  def __init__(self,value,nextNode=None):
+    self.value = value
+    self.nextNode = nextNode
+# "3"-->"5"-->"71"
+node1 = myLinkedlistNode("3")
+node2=myLinkedlistNode("5")
+node3=myLinkedlistNode("71")
+node4=myLinkedlistNode("71")
+node1.nextNode = node2
+node2.nextNode = node3
+node3.nextNode = node4
+
+cur_node = node1
+while True:
+  print (cur_node.value,end ="->")
+  if cur_node.nextNode is None:
+    print ("None")
+    break
+  cur_node = cur_node.nextNode
+
+class myLinkedlistNodeNew():
+  def __init__(self,value, nextNode=None):
+    self.value = value
+    self.nextNode = nextNode
+class linkList:
+  def __init__(self,head = None):
+    self.head = head
+  def add(self, value):
+    node = myLinkedlistNodeNew(value)
+    if self.head is None:
+      self.head = node
+      return
+    cur_node = self.head
+    while True:
+      if cur_node.nextNode is None:
+        cur_node.nextNode = node
+        break
+      cur_node = cur_node.nextNode
+  def printLinkedList (self):
+    cur_node =self.head
+    while cur_node is not None:
+      print (cur_node.value,end = "->")
+      cur_node = cur_node.nextNode
+    print ("None")
+ll= linkList()
+ll.printLinkedList()
+ll.add("3")
+ll.printLinkedList()
+ll.add("7")
+ll.printLinkedList()
+ll.add("72")
+ll.printLinkedList()
