@@ -1,0 +1,14 @@
+numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
+
+def selectionSort(array):
+  for i in range(len(numbers)-1):
+    max = i
+    tmp = numbers[max]
+    for j in range(len(numbers)-1):
+      if numbers[max]>numbers[j]:
+        numbers[max],numbers[j]=numbers[j],numbers[max]
+  
+
+
+selectionSort(numbers)
+print(numbers)
